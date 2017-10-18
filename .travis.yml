@@ -15,8 +15,7 @@ deploy:
   skip_cleanup: true
   manifest: manifest-dev.yml    # (optional)  Defaults to manifest.yml.
   username: $BLUEMIX_USER
-  password:
-    secure: FlYbbUqNMJHFSdL6y055KXl5qWj3Fp7j2r/7ZdwsqsUSB/IHR5HyznBPXNgAEtexkOac1+WjOwFstbcxOrTURgBbZHMy5iVlIUSYHEB+Ly6KMAAY8CywnKvRx2YkGMsc3QzLvWZ8ZuI+AjFMIcty6FdvcaoLQc1PGxTY1sMMD0UKC+rZwrylpv5TKD6lusn5KoyFnWUIeGi4U6HzWWgJGuqNpRrkM/fro4u3AcM0OeWwW2A+OrntdPKfPXEhQQKiv6FgdrTe8a4KWFJNhAyHc0JH68ki9uzFwxJiwhQ5ZJnfnzwsexX1pB5UbxpPV43vcAjCv8Z/AwjnvwTCCYhQA6fY6J0KJ6HS3t+RTPI73QUcJrZ19Maa+SNpPvisWVxm1sSh/SLffX9mmtvl3OrsZ3nCJNmSM6qGxK26bK9X0v+5/fxLb+4dqP0u20m948tjJ7qtYD1ntuQiStvQ0/1xraxQ93RvbG9Vr8SVkaYzf0O2bM7C4ROnBCf/oJvMZkM3ua5rVbd5bQ0qky4pbtXm+t/GfRXqIPSrDEFRPv6y3+UtP5GtqzdMSCni3LvQ10DsokujUDWgaObcZsq+eBZkwirjqw7Nw/f8xs4dnWarsnoN/35tQQ/rozcVLiXDLTN9vW/21vtIjv+zGBMtOUvIEHCBDukFk663j/Zn+gcw514=
+  password: $BLUEMIX_PASSWORD
   organization: $BLUEMIX_ORGANIZATION
   space: $BLUEMIX_SPACE
   region: eu-gb   # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
