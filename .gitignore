@@ -31,4 +31,3 @@ nbdist/
 settings-local.xml
 *.crt
 filestore.props
-manifest.yml

@@ -1,0 +1,9 @@
+applications:
+- path: target/spring-boot-tdd.jar
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: spring-boot-tdd
+  host: spring-boot-tdd
+  disk_quota: 1024M
+  
