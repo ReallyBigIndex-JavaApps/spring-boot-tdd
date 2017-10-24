@@ -5,4 +5,4 @@ rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR root@13.126.88.66:/root/app/
 
 echo "***** Copy done!"
 
-#ssh root@9.109.125.77 "cd ~/deploy_script.sh"
+ssh root@13.126.88.66 "cd /root/app; chmod +x sample.sh; sh sample.sh"
