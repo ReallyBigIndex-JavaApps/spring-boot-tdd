@@ -7,11 +7,8 @@ sudo: required
 jdk:
 - oraclejdk8
 
-# addons:
-#  ssh_known_hosts: 13.126.88.66
-
-before_deploy: # or anywhere before the secret ssh host is needed
-  - ssh-keyscan -t $TRAVIS_SSH_KEY_TYPES -H $DEPLOY_HOST 2>&1 | tee -a $HOME/.ssh/known_hosts
+addons:
+  ssh_known_hosts: 13.126.88.66
 
 script:
 - mvn clean package
