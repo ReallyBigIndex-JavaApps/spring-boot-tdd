@@ -24,7 +24,7 @@ deploy:
   script: sh ./deploy.sh
   on:
     branch: master
-    
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_f4221943953d_key -iv $encrypted_f4221943953d_iv
   -in chaincode_deploy_rsa.enc -out /tmp/chaincode_deploy_rsa -d
