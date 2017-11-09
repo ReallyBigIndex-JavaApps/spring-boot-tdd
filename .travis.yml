@@ -7,14 +7,14 @@ sudo: required
 jdk:
 - oraclejdk8
 
+env:
+  - TARGET_SERVER_IP="13.126.88.66"
+  
 addons:
-  ssh_known_hosts: $TARGET_SERVER_IP1
+  ssh_known_hosts: $TARGET_SERVER_IP
 
 script:
 - mvn clean package
-
-env:
-  - TARGET_SERVER_IP1="13.126.88.66"
 
 app: spring-boot-tdd
 
