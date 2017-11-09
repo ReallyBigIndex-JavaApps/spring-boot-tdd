@@ -18,7 +18,7 @@ app: spring-boot-tdd
 deploy:
   provider: script
   skip_cleanup: true
-  script: sh ./deploy.sh
+  script: sh ./deploy.sh $TARGET_SERVER_HOST
   on:
     branch: master
 
