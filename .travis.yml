@@ -4,25 +4,19 @@ sudo: required
 jdk:
 - oraclejdk8
 addons:
-  ssh_known_hosts: 13.126.88.66
-
+  ssh_known_hosts: $TARGET_SERVER_IP
 script:
 - mvn clean package
-
 app: spring-boot-tdd
-
-before_install:
-- openssl aes-256-cbc -K $encrypted_f4221943953d_key -iv $encrypted_f4221943953d_iv
-  -in chaincode_deploy_rsa.enc -out /tmp/chaincode_deploy_rsa -d
-- eval "$(ssh-agent -s)"
-- chmod 600 /tmp/chaincode_deploy_rsa
-- ssh-add /tmp/chaincode_deploy_rsa
-
 deploy:
   provider: script
   skip_cleanup: true
   script: sh ./deploy.sh
   on:
     branch: master
-    
-    
+before_install:
+- openssl aes-256-cbc -K $encrypted_f4221943953d_key -iv $encrypted_f4221943953d_iv
+  -in chaincode_deploy_rsa.enc -out /tmp/chaincode_deploy_rsa -d
+  - eval "$(ssh-agent -s)"
+- chmod 600 /tmp/chaincode_deploy_rsa
+- ssh-add /tmp/chaincode_deploy_rsa
