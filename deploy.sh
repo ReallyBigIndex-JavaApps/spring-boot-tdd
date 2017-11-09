@@ -7,7 +7,3 @@ echo
 echo "***** Executing deployment script."
 ssh root@$TARGET_SERVER_HOST "cd /root/app; chmod +x sample.sh; sh sample.sh"
 echo "***** Executing deployment script done!"
-
-echo "***** Start zipping the chaincode folder!"
-zip -r $TRAVIS_BUILD_DIR.zip $TRAVIS_BUILD_DIR
-echo "***** End zipping the chaincode folder!"
