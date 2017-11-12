@@ -15,6 +15,6 @@ app: spring-boot-tdd
 deploy:
   provider: script
   skip_cleanup: true
-  script: python sample.py
+  script: python $DEPLOY_SCRIPT
   on:
     branch: master
